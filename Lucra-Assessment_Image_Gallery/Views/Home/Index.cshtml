@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
+
+	List<string> images = new List<string>{
+        "https://shorturl.at/jmyLN",
+		"https://shorturl.at/beDM0",
+		"https://shorturl.at/knLP0",
+		"https://shorturl.at/knLP0",
+		"https://shorturl.at/beDM0",
+		"https://shorturl.at/knLP0",
+		"https://shorturl.at/beDM0",
+		"https://shorturl.at/jmyLN",
+		"https://shorturl.at/knLP0",
+		"https://shorturl.at/jmyLN"
+	};
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+	<h1 class="text-center m-5">Images</h1>
+    <div class="row">
+        @foreach (var imageUrl in images)
+        {
+            <div class="col-md-4">
+                <img src="@imageUrl" class="img-fluid m-1" alt="Image">
+            </div>
+        }
+    </div>
 </div>

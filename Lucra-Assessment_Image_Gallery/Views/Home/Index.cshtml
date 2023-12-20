@@ -2,18 +2,25 @@
 	ViewData["Title"] = "Home Page";
 
 	List<string> images = new List<string>{
-        "https://shorturl.at/jmyLN",
-		"https://shorturl.at/beDM0",
-		"https://shorturl.at/knLP0",
-		"https://shorturl.at/knLP0",
-		"https://shorturl.at/beDM0",
-		"https://shorturl.at/knLP0",
-		"https://shorturl.at/beDM0",
-		"https://shorturl.at/jmyLN",
-		"https://shorturl.at/knLP0",
-		"https://shorturl.at/jmyLN"
+       ""
 	};
 }
+
+<form>
+	<div style="font-weight:700">
+		<label class="m-1">Upload Images</label>
+		<input class="form-control input-group m-1" type="file" />
+	</div>
+	<div style="font-weight:700">
+		<label class="m-1">Title</label>
+		<input class="form-control input-group m-1" type="text" placeholder="eg Painting" />
+	</div>
+	<div style="font-weight:700">
+		<label class="m-1">Description</label>
+		<input class="form-control input-group m-1" type="text" />
+	</div>
+	<button type="button" class="m-1 btn btn-dark">Upload</button>
+</form>
 
 <div class="container">
 	<h1 class="text-center m-5">Images</h1>

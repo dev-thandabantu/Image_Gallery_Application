@@ -1,3 +1,6 @@
+using Lucra_Assessment_Image_Gallery.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Lucra_Assessment_Image_Gallery
 {
     public class Program
@@ -8,6 +11,8 @@ namespace Lucra_Assessment_Image_Gallery
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ImageUploadDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ImageUploadDatabase")));
 
             var app = builder.Build();
 
